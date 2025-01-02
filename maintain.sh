@@ -2,10 +2,12 @@
 # この行はシェバン（shebang）で、スクリプトがbashで実行されることを示します。
 
 MD_DIR=../../../sugiyama_ha/diary
-CMD="git pull origin master"
+PULL_CMD="git pull origin master"
+PUSH_CMD="git push origin master"
 
-$CMD
+$PULL_CMD
+$PUSH_CMD
 
 cd $MD_DIR
 
-$CMD
+$PULL_CMD
