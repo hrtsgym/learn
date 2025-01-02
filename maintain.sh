@@ -3,11 +3,11 @@
 
 MD_DIR=../../../sugiyama_ha/diary
 PULL_CMD="git pull origin master"
-PUSH_CMD="git push origin master"
 
+#sampleプロジェクトをpullする
 $PULL_CMD
-$PUSH_CMD
 
+#diaryプロジェクトに移動する
 cd $MD_DIR
-
+#diaryプロジェクトをpullする
 $PULL_CMD
