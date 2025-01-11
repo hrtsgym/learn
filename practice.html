@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoリスト - 新規作成</title>
+</head>
+<body>
+    <h1>新しいToDoを追加</h1>
+
+    <!-- フォーム -->
+    <form th:action="@{/todos}" th:object="${todo}" method="post">
+        <label for="task">タスク:</label>
+        <input type="text" id="task" name="task" th:field="*{task}" required="required">
+        
+        <label for="completed">完了済み:</label>
+        <input type="checkbox" id="completed" name="completed" th:field="*{completed}">
+        
+        <button type="submit">追加</button>
+    </form>
+
+    <!-- リストに戻るリンク -->
+    <a href="/todos">ToDoリストに戻る</a>
+</body>
+</html>
